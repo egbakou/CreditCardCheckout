@@ -19,7 +19,7 @@
             VerticalOptions="FillAndExpand"
             VerticalScrollBarVisibility="Never">
 
-            <!--  GRID OF 5 ROWS  -->
+            <!--  GRID OF 2 ROWS  -->
             <Grid
                 Padding="15,5,15,10"
                 ColumnSpacing="0"
@@ -48,8 +48,12 @@
                         WidthRequest="40" />
                 </Grid>
 
+
+
+                <!--  TIMELINE  -->
                 <StackLayout Grid.Row="1">
                     <StackLayout Orientation="Horizontal">
+                        <!--  GREEN CIRCLE WITH LABEL  -->
                         <BoxView
                             CornerRadius="240"
                             HeightRequest="25"
@@ -63,12 +67,14 @@
                             Style="{StaticResource LabeStyle}"
                             Text="ORDER SUMMARY" />
                     </StackLayout>
+                    <!--  VERTICAL WHITE LINE  -->
                     <BoxView
                         Margin="10,-10"
                         HeightRequest="30"
                         HorizontalOptions="Start"
                         WidthRequest="3"
                         Color="White" />
+                    <!--  TOTAL AMOUNT IN PANCAKEVIEW  -->
                     <pancake:PancakeView
                         BackgroundColor="#52597F"
                         CornerRadius="15"
@@ -101,12 +107,17 @@
                             </StackLayout>
                         </StackLayout>
                     </pancake:PancakeView>
+                    <!--  VERTICAL WHITE LINE  -->
                     <BoxView
                         Margin="10,-6"
                         HeightRequest="30"
                         HorizontalOptions="Start"
                         WidthRequest="3"
                         Color="White" />
+
+
+
+                    <!--  RED CIRCLE WITH LABEL AND FLEXBUTTON  -->
                     <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                         <BoxView
                             CornerRadius="240"
@@ -136,12 +147,15 @@
                             Text="+"
                             WidthRequest="30" />
                     </StackLayout>
+                    <!--  VERTICAL WHITE LINE  -->
                     <BoxView
                         Margin="10,-10"
                         HeightRequest="30"
                         HorizontalOptions="Start"
                         WidthRequest="3"
                         Color="White" />
+
+                    <!--  CARDS VIEWS  -->
                     <StackLayout
                         Margin="0,0,0,0"
                         HeightRequest="240"
@@ -177,20 +191,22 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         Style="{StaticResource LabeStyle}"
                                                         Text="{Binding Bank}" />
-                                                    <Frame
-                                                        BackgroundColor="{Binding FirstSignColor}"
-                                                        CornerRadius="40"
-                                                        HeightRequest="20"
+
+                                                    <BoxView
+                                                        CornerRadius="240"
+                                                        HeightRequest="30"
                                                         HorizontalOptions="End"
-                                                        IsClippedToBounds="True"
-                                                        WidthRequest="10" />
-                                                    <Frame
-                                                        Margin="-40,0,0,0"
-                                                        BackgroundColor="{Binding LastSignColor}"
-                                                        CornerRadius="40"
-                                                        HeightRequest="20"
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="30"
+                                                        Color="{Binding FirstSignColor}" />
+                                                    <BoxView
+                                                        Margin="-20,0,0,0"
+                                                        CornerRadius="240"
+                                                        HeightRequest="30"
                                                         HorizontalOptions="End"
-                                                        WidthRequest="10" />
+                                                        VerticalOptions="Start"
+                                                        WidthRequest="30"
+                                                        Color="{Binding LastSignColor}" />
                                                 </StackLayout>
                                                 <StackLayout
                                                     Grid.Row="1"
@@ -241,12 +257,16 @@
                             Style="{StaticResource LabeStyle}"
                             Text="Double click the card to edit details" />
                     </StackLayout>
+                    <!--  VERTICAL WHITE LINE  -->
                     <BoxView
                         Margin="10,-52,0,-10"
                         HeightRequest="55"
                         HorizontalOptions="Start"
                         WidthRequest="3"
                         Color="White" />
+
+
+                    <!--  PAYEMENT FLEXBUTTON  -->
                     <flex:FlexButton
                         Margin="0,0"
                         BackgroundColor="White"
@@ -267,7 +287,6 @@
                         IconOrientation="Right"
                         Text="PAY NOW" />
                 </StackLayout>
-
             </Grid>
         </ScrollView>
     </ContentPage.Content>
