@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShopTimeline.Views.CreditCardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
+    BackgroundColor="#2C3359"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+
+        <!--  ALL CONTENT IN SCROLLVIEW  -->
+        <ScrollView
+            HorizontalScrollBarVisibility="Never"
+            VerticalOptions="FillAndExpand"
+            VerticalScrollBarVisibility="Never">
+
+            <!--  GRID OF 5 ROWS  -->
+            <Grid
+                Padding="15,10,15,10"
+                ColumnSpacing="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--  HEADER  -->
+                <Grid Grid.Row="0" HeightRequest="50">
+                    <Label
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource LabeStyle}"
+                        Text="CREDIT CARD"
+                        VerticalOptions="Center" />
+                    <controls:CircleImage
+                        Aspect="AspectFill"
+                        BorderColor="#DCA688"
+                        HeightRequest="40"
+                        HorizontalOptions="End"
+                        Source="me.jpg"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                </Grid>
+
+                <!--  ADD NEW ITEM SECTION  -->
+                <Grid Grid.Row="1" HeightRequest="30">
+                    <flex:FlexButton
+                        Padding="0"
+                        BackgroundColor="#2C3359"
+                        BorderColor="White"
+                        CornerRadius="38"
+                        FontFamily="{StaticResource RopaSans}"
+                        FontSize="30"
+                        ForegroundColor="#ffffff"
+                        HeightRequest="30"
+                        HighlightBackgroundColor="#8EA4D2"
+                        HighlightBorderColor="White"
+                        HighlightForegroundColor="#49516F"
+                        HorizontalOptions="End"
+                        Text="+"
+                        WidthRequest="30" />
+                </Grid>
+
+                <!--  AMOUNT TO PAY  -->
+                <StackLayout
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource LabeStyle}"
+                        Text="PAY" />
+                    <Label
+                        FontSize="40"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource LabeStyle}"
+                        Text="Rs.8000" />
+                </StackLayout>
+
+
+                <!--  CARDS SECTION  -->
+                <StackLayout
+                    Grid.Row="3"
+                    Margin="0,20,0,20"
+                    HeightRequest="240"
+                    HorizontalOptions="FillAndExpand">
+                    <cards:CardsView ItemsSource="{Binding Cards}" VerticalOptions="CenterAndExpand">
+                        <cards:CardsView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <pancake:PancakeView
+                                        BackgroundGradientAngle="180"
+                                        BackgroundGradientEndColor="{Binding BackgroundGradientEndColor}"
+                                        BackgroundGradientStartColor="{Binding BackgroundGradientStartColor}"
+                                        CornerRadius="20"
+                                        Elevation="4"
+                                        HasShadow="True"
+                                        HeightRequest="200"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Grid
+                                            Margin="20,20,20,20"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <StackLayout
+                                                Grid.Row="0"
+                                                HorizontalOptions="FillAndExpand"
+                                                Orientation="Horizontal">
+                                                <Label
+                                                    FontSize="20"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    Style="{StaticResource LabeStyle}"
+                                                    Text="{Binding Bank}" />
+                                                <Frame
+                                                    BackgroundColor="{Binding FirstSignColor}"
+                                                    CornerRadius="40"
+                                                    HeightRequest="20"
+                                                    HorizontalOptions="End"
+                                                    IsClippedToBounds="True"
+                                                    WidthRequest="10" />
+                                                <Frame
+                                                    Margin="-40,0,0,0"
+                                                    BackgroundColor="{Binding LastSignColor}"
+                                                    CornerRadius="40"
+                                                    HeightRequest="20"
+                                                    HorizontalOptions="End"
+                                                    WidthRequest="10" />
+                                            </StackLayout>
+                                            <StackLayout
+                                                Grid.Row="1"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="EndAndExpand">
+                                                <Label
+                                                    FontSize="18"
+                                                    Style="{StaticResource LabeStyle}"
+                                                    Text="{Binding CardNumber}" />
+                                            </StackLayout>
+                                            <StackLayout
+                                                Grid.Row="2"
+                                                HorizontalOptions="FillAndExpand"
+                                                Orientation="Horizontal"
+                                                VerticalOptions="End">
+                                                <Label
+                                                    FontSize="18"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    Style="{StaticResource LabeStyle}"
+                                                    Text="{Binding Owner}" />
+                                                <Label
+                                                    FontSize="16"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    Style="{StaticResource LabeStyle}"
+                                                    Text="{Binding ExpirationDate}" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </pancake:PancakeView>
+                                    <flex:FlexButton
+                                        Margin="0,-15,20,0"
+                                        BackgroundColor="#22863A"
+                                        CornerRadius="20"
+                                        FontFamily="{StaticResource RopaSans}"
+                                        FontSize="16"
+                                        ForegroundColor="#ffffff"
+                                        HeightRequest="30"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="Select"
+                                        VerticalOptions="Start" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </cards:CardsView.ItemTemplate>
+                    </cards:CardsView>
+                    <Label
+                        Margin="30,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Style="{StaticResource LabeStyle}"
+                        Text="Double click the card to edit details" />
+                </StackLayout>
+
+                <!--  PAY BUTTON  -->
+                <flex:FlexButton
+                    Grid.Row="4"
+                    Padding="0"
+                    BackgroundColor="White"
+                    BorderColor="#49516F"
+                    BorderThickness="0,0,0,0"
+                    ClickedCommand="{Binding ButtonClickedCommand}"
+                    CornerRadius="20"
+                    FontFamily="{StaticResource RopaSans}"
+                    FontSize="25"
+                    ForegroundColor="#2C3359"
+                    HasShadow="false"
+                    HeightRequest="55"
+                    HighlightBackgroundColor="#8EA4D2"
+                    HighlightBorderColor="#6279B8"
+                    HighlightForegroundColor="#49516F"
+                    HorizontalOptions="FillAndExpand"
+                    Icon="right_arrow.png"
+                    IconOrientation="Right"
+                    Text="PAY NOW" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
