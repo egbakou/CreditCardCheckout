@@ -9,7 +9,7 @@ namespace ShopTimeline
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ShopView());
+            MainPage = new NavigationPage(new CreditCardView());
         }
 
         protected override void OnStart()

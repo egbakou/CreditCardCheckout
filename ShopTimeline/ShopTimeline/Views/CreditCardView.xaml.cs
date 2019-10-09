@@ -16,5 +16,10 @@ namespace ShopTimeline.Views
             BindingContext = viewModel = new CreditCardViewModel();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        private async void FlexButton_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ShopView());
+        }
     }
 }
