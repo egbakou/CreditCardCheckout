@@ -8,8 +8,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
     xmlns:template="clr-namespace:ShopTimeline.Views.Templates"
     BackgroundColor="#2C3359"
     mc:Ignorable="d">
