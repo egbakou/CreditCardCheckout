@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     mc:Ignorable="d">
-    <StackLayout>
+    <StackLayout Padding="5">
         <pancake:PancakeView
             BackgroundGradientAngle="180"
             BackgroundGradientEndColor="{Binding BackgroundGradientEndColor}"

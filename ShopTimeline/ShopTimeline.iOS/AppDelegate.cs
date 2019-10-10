@@ -27,7 +27,7 @@ namespace ShopTimeline.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
-            CardsViewRenderer.Preserve()
+            CardsViewRenderer.Preserve();
             ImageCircleRenderer.Init();
             FlexButton.Init();
             LoadApplication(new App());

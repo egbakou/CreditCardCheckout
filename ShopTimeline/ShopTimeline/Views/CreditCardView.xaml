@@ -89,7 +89,26 @@
 
 
                 <!--  CARDS SECTION  -->
-                <StackLayout
+
+
+                <CarouselView
+                    Grid.Row="3"
+                    Margin="0,20,0,20"
+                    HeightRequest="240"
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsSource="{Binding Cards}"
+                    PeekAreaInsets="20,0,40,0">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+
+                            <template:CardTemplate />
+                        </DataTemplate>
+
+
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <!--<StackLayout
                     Grid.Row="3"
                     Margin="0,20,0,20"
                     HeightRequest="240"
@@ -107,7 +126,7 @@
                         HorizontalOptions="StartAndExpand"
                         Style="{StaticResource LabeStyle}"
                         Text="Double click the card to edit details" />
-                </StackLayout>
+                </StackLayout>-->
 
                 <!--  PAY BUTTON  -->
                 <flex:FlexButton
