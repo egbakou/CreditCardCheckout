@@ -10,6 +10,12 @@ This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](ht
 
 ![](design/Result.png)
 
+## Screenshot with CarousalView
+
+![](https://devoirtech.com/Screenshot_20191010-142035.jpg)
+![](https://devoirtech.com/Screenshot_20191010-142640.jpg)
+
+
 ## Blog Post
 
 The blog post on the implementation of the design is coming soon !
