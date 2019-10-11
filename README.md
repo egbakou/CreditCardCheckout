@@ -12,7 +12,7 @@ This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](ht
 
 ## Blog Post
 
-The blog post on the implementation of the design is coming soon !
+I have written a [blog post on the implementation](https://lioncoding.com/2019/10/11/2019-10-11-xamarin-ui-challenge-credit-card-checkout/) of the design over at [my blog](https://lioncoding.com).
 
 # Contributions
 
