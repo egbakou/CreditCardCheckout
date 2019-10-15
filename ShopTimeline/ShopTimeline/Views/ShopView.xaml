@@ -131,7 +131,7 @@
                             Margin="10,0,0,0"
                             FontSize="25"
                             Style="{StaticResource LabeStyle}"
-                            Text="PAYEMENT" />
+                            Text="PAYMENT" />
                         <flex:FlexButton
                             Padding="0"
                             BackgroundColor="#2C3359"
