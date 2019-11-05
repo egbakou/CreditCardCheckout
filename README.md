@@ -8,7 +8,7 @@ This UI Challenge is based on the fantastic dribble designs by [Antra Sharma](ht
 
 ## Screenshot
 
-![](design/Result.png)
+![](design/credit-card-ui-challenge_V2.png)
 
 ## Blog Post
 
