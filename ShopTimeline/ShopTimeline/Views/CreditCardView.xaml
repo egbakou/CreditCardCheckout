@@ -94,13 +94,16 @@
                     Margin="0,20,0,20"
                     HeightRequest="240"
                     HorizontalOptions="FillAndExpand">
-                    <cards:CardsView ItemsSource="{Binding Cards}" VerticalOptions="CenterAndExpand">
-                        <cards:CardsView.ItemTemplate>
+                    <CarouselView
+                        HorizontalScrollBarVisibility="Never"
+                        ItemsSource="{Binding Cards}"
+                        PeekAreaInsets="20,0,40,0">
+                        <CarouselView.ItemTemplate>
                             <DataTemplate>
                                 <template:CardTemplate />
                             </DataTemplate>
-                        </cards:CardsView.ItemTemplate>
-                    </cards:CardsView>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
                     <Label
                         Margin="30,0,0,0"
                         FontSize="16"
